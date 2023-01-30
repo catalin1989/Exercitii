@@ -10,4 +10,7 @@ public class Car {
     int doorCount;
     boolean damaged;
     String color;
+
+    //has-a relationship (agregation)
+    Engine engine;
 }

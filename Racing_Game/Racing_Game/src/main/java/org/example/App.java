@@ -61,21 +61,26 @@ public class App {
         System.out.println("Color "+car2.color);
         System.out.println(car2);
 
-        System.out.println("Initial name of car1 "+carReference.name);
-    carReference.name= "Audi";
-        System.out.println("Changed name of car1 "+carReference.name);
+       double distanceForCar1= carReference.accelerate(60,1);
 
-        carReference= new Car();
-        System.out.println("Name of new car "+carReference.name);
-        carReference.name= "BMW";
-        carReference=car2;
-        System.out.println("Name of carReferenced from 2 variabiles Carreference "+carReference.name);
-        System.out.println("Name of carReferenced from 2 variabiles Car2 "+car2.name);
+        double distanceForCar2= car2.accelerate(100, 1);
 
-        car2.name= "Dacia";
 
-        System.out.println("Updated name of carReferenced from 2 variabiles Carreference "+carReference.name);
-        System.out.println("Updated name of carReferenced from 2 variabiles Car2 "+car2.name);
+//        System.out.println("Initial name of car1 "+carReference.name);
+//    carReference.name= "Audi";
+//        System.out.println("Changed name of car1 "+carReference.name);
+//
+//        carReference= new Car();
+//        System.out.println("Name of new car "+carReference.name);
+//        carReference.name= "BMW";
+//        carReference=car2;
+//        System.out.println("Name of carReferenced from 2 variabiles Carreference "+carReference.name);
+//        System.out.println("Name of carReferenced from 2 variabiles Car2 "+car2.name);
+//
+//        car2.name= "Dacia";
+//
+//        System.out.println("Updated name of carReferenced from 2 variabiles Carreference "+carReference.name);
+//        System.out.println("Updated name of carReferenced from 2 variabiles Car2 "+car2.name);
 
 
 

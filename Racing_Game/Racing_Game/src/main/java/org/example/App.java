@@ -3,8 +3,15 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-        
-    Car carReference = new Car();
+        Engine autoVehicleEngine= new Engine();
+        autoVehicleEngine.manufacturer= "Volkswagen";
+        Autovehicle autovehicle= new Autovehicle(autoVehicleEngine);
+
+        Engine engine1= new Engine();
+        engine1.manufacturer= "Ferrari";
+        engine1.capacity= 3000;
+
+    Car carReference = new Car(engine1);
 
     carReference.name= "Ferrari";
     carReference.maxSpeed= 300;
@@ -15,11 +22,7 @@ public class App {
     carReference.doorCount=1;
     carReference.color= "Red";
 
-    Engine engine1= new Engine();
-    engine1.manufacturer= "Ferrari";
-    engine1.capacity= 3000;
 
-    carReference.engine=engine1;
 
         System.out.println("Engine1 capacity "+ engine1.capacity);
         System.out.println("CarReference capacity "+ carReference.engine.capacity);
@@ -39,7 +42,7 @@ public class App {
         System.out.println("Color "+carReference.color);
         System.out.println(carReference);
 
-        Car car2= new Car();
+        Car car2= new Car(new Engine());
         car2.name= "Renno";
         car2.maxSpeed= 300;
         car2.fuelLevel= 70;
@@ -49,7 +52,6 @@ public class App {
        // carReference.doorCount=1;
        // carReference.color= "Red";
 
-        car2.engine= new Engine();
         car2.engine.capacity=2000;
         System.out.println("Properties for car2 "+ car2.name);
         System.out.println("Max Speed "+car2.maxSpeed);

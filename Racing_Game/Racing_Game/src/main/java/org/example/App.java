@@ -11,7 +11,7 @@ public class App {
     carReference.fuelLevel= 60;
     carReference.mileage= 12.5;
     carReference.totalTravelDistance=0;
-    carReference.damaged=true;
+    carReference.damaged=false;
     carReference.doorCount=1;
     carReference.color= "Red";
 
@@ -41,9 +41,9 @@ public class App {
 
         Car car2= new Car();
         car2.name= "Renno";
-       // car2.maxSpeed= 300;
+        car2.maxSpeed= 300;
         car2.fuelLevel= 70;
-       // car2.mileage= 12.5;
+        car2.mileage= 10;
         car2.totalTravelDistance=100;
        // carReference.damaged=true;
        // carReference.doorCount=1;
@@ -61,10 +61,17 @@ public class App {
         System.out.println("Color "+car2.color);
         System.out.println(car2);
 
+        System.out.println("****************************************************");
+
        double distanceForCar1= carReference.accelerate(60,1);
 
-        double distanceForCar2= car2.accelerate(100, 1);
+        double distanceForCar2= car2.accelerate(130, 1);
 
+        System.out.println("Engine manufacturer before repair: "+carReference.engine.manufacturer);
+        Mechanic mechanic= new Mechanic();
+        mechanic.repair(carReference);
+
+        System.out.println("Engine manufacturer after repair: "+carReference.engine.manufacturer);
 
 //        System.out.println("Initial name of car1 "+carReference.name);
 //    carReference.name= "Audi";

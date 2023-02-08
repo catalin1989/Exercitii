@@ -3,7 +3,11 @@ package org.example;
 
 public class App {
     public static void main(String[] args) {
-        Engine autoVehicleEngine= new Engine();
+
+        Game game = new Game();
+        game.start();
+
+       /* Engine autoVehicleEngine= new Engine();
         autoVehicleEngine.manufacturer= "Volkswagen";
         Autovehicle autovehicle= new Autovehicle(autoVehicleEngine);
 
@@ -73,7 +77,7 @@ public class App {
         Mechanic mechanic= new Mechanic();
         mechanic.repair(carReference);
 
-        System.out.println("Engine manufacturer after repair: "+carReference.engine.manufacturer);
+        System.out.println("Engine manufacturer after repair: "+carReference.engine.manufacturer);*/
 
 //        System.out.println("Initial name of car1 "+carReference.name);
 //    carReference.name= "Audi";
